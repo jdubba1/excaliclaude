@@ -12,8 +12,8 @@ import {
   Plus,
 } from "lucide-react";
 
-// Import all .excalidraw files from diagrams subdirectory
-const diagramModules = import.meta.glob("../diagrams/*.excalidraw", {
+// Import all .excalidraw files from diagrams directory
+const diagramModules = import.meta.glob("/diagrams/*.excalidraw", {
   eager: false,
   query: "?raw",
   import: "default",
@@ -71,8 +71,8 @@ function App() {
   // Process available files on mount
   useEffect(() => {
     const fileList = Object.keys(diagramModules).map((path) => {
-      const name = path.replace("../diagrams/", "").replace(".excalidraw", "");
-      const filename = path.replace("../diagrams/", "");
+      const name = path.replace("/diagrams/", "").replace(".excalidraw", "");
+      const filename = path.replace("/diagrams/", "");
       return { path, name, filename };
     });
     setFiles(fileList);

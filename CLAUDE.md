@@ -122,12 +122,12 @@ For multi-line text, find the longest line and calculate width based on that.
 
 ## Viewer
 
-Run the viewer from `/viewer`:
+Run from the project root:
 ```bash
 pnpm dev
 ```
 
-Diagram files are stored in `/viewer/diagrams/`.
+Diagram files are stored in `diagrams/`.
 
 - `⌘S` to save
 - `⌘B` to toggle sidebar

@@ -58,9 +58,4 @@ export default defineConfig({
       interval: 500,
     },
   },
-  resolve: {
-    alias: {
-      "@diagrams": path.resolve(__dirname, ".."),
-    },
-  },
 });
